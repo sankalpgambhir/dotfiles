@@ -87,9 +87,9 @@ override-redirect = true
 cursor-click = pointer
 
 [bar/status]
-width = 23%
+width = 25%
 height = 3.7%
-offset-x = 78.0%
+offset-x = 75.0%
 offset-y = 0.65%
 radius = 12
 fixed-center = true
@@ -183,7 +183,7 @@ type = internal/network
 interface = wlo1
 interval = 3.0
 
-format-connected =<ramp-signal>
+format-connected = <ramp-signal> <label-connected>
 label-connected = %essid%
 
 label-disconnected = 
@@ -196,7 +196,7 @@ ramp-signal-3 = 󰤥
 ramp-signal-4 = 󰤨
 ramp-signal-foreground = ${colors.color6}
 
-click-right = "exec kitty -e nmtui"
+click-left = "exec kitty -e nmtui"
 
 [module/eth]
 type = internal/network
@@ -217,7 +217,7 @@ label-volume-foreground = ${colors.color6}
 label-muted = ""
 label-muted-foreground = #607290
 
-click-right = "exec kitty -e nmtui"
+click-right = "exec pavucontrol"
 
 [module/battery]
 type = internal/battery
@@ -264,7 +264,7 @@ tail = true
 
 [module/date]
 type = custom/script
-exec =  date '+%a %e %b %I:%M %p' 
+exec =  echo "|  $(date '+%a %e %b %I:%M %p')" 
 interval = 5
 tail=true
 

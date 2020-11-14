@@ -1,0 +1,17 @@
+#! /usr/bin/env sh
+
+pywal-discord
+spicetify update
+$HOME/.config/dunst/launchdunst.sh
+
+# telegram
+loc=${HOME}/.cache/wal-telegram
+rm -fv "${loc}/*".tdesktop-theme
+rm -fv "${loc}/*".png
+${HOME}/programs/wal-telegram/wal-telegram 							# gen palette
+source "${HOME}/.cache/wal/colors.sh"								# get colors
+convert -size 100x100 xc:${color0} "${loc}/tiled.png"						# generate solid background
+zip -j "${loc}/colors.tdesktop-theme" "${loc}/tiled.png" "${loc}/colors.tdesktop-palette"	# put into a theme file
+
+
+
