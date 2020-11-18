@@ -120,39 +120,6 @@ override-redirect = true
 cursor-click = pointer
 cursor-scroll = default
 
-[bar/power]
-width = 2.1%
-height = 3.7%
-offset-x = 97.9%:-10
-offset-y = 0.88%
-radius = 12
-fixed-center = true
-bottom = false
-
-background = ${colors.alert}
-foreground = #fff
-
-border-size = 0
-border-color = #000
-
-padding-left = 5
-padding-right = 0
-
-module-margin-left = 1
-module-margin-right = 1
- 
-font-0 = Material Design Icons Desktop:pixelsize=18;6
- 
-modules-center = power-menu 
-
-wm-restack = i3
-override-redirect = true
-
-cursor-click = pointer
-cursor-scroll = default
-
-click-left = ~/.config/polybar/scripts/power-menu.sh &
-
 ### MODULES
 
 [module/i3]
@@ -196,7 +163,7 @@ ramp-signal-3 = 󰤥
 ramp-signal-4 = 󰤨
 ramp-signal-foreground = ${colors.color6}
 
-click-left = "exec kitty -e nmtui"
+click-left = exec $ALT_TERM -e calcurse
 
 [module/eth]
 type = internal/network
@@ -252,6 +219,7 @@ ramp-capacity-10 = 󰁹
 ramp-capacity-foreground = ${colors.color6}
 ramp-capacity-framerate = 750
 
+
 [module/song]
 type = custom/script
 exec = $HOME/.config/polybar/scripts/player.sh 2>/dev/null || echo "No player found"
@@ -272,7 +240,7 @@ exec =  echo "|  $(date '+%a %e %b %I:%M %p')"
 interval = 5
 tail=true
 
-#click-left = ~/.config/polybar/scripts/calendar.sh &
+click-left = exec $ALT_TERM -e nmtui
 
 [settings]
 screenchange-reload = false

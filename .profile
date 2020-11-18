@@ -5,3 +5,6 @@ export PATH="$PATH:$HOME/.gem/ruby/2.7.0/bin"		# ruby gems
 
 # firefox touch gestures
 export MOZ_USE_XINPUT2=1
+
+# alternate terminal for popups
+export ALT_TERM="kitty"
