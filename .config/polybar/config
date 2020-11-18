@@ -50,9 +50,9 @@ cursor-click = pointer
 cursor-scroll = default
 
 [bar/music]
-width = 20%
+width = 30%
 height = 3.7%
-offset-x = 40.5%
+offset-x = 35.5%
 offset-y = 0.65%
 radius = 12
 fixed-center = true
@@ -112,7 +112,7 @@ font-2 = mononoki Nerd Font:pixelsize=15:style=Bold Condensed;3
 font-3 = mononoki Nerd Font:pixelsize=15:style=Medium Condensed;5
 font-4 = Weather Icons:size=12;0
 
-modules-center = update eth battery wlan date 
+modules-center = eth battery wlan date 
 
 wm-restack = i3
 override-redirect = true
@@ -254,13 +254,17 @@ ramp-capacity-framerate = 750
 
 [module/song]
 type = custom/script
-exec = ~/.config/polybar/scripts/song.sh 2>/dev/null || echo "No player found"
-format = "<label>  "
+exec = $HOME/.config/polybar/scripts/player.sh 2>/dev/null || echo "No player found"
+format = "<label>"
 format-prefix = "  %{F-}"
+format-suffix = " | "
 format-background = #0000000
 interval = 1
 
-tail = true 
+tail = true
+
+; media controls
+click-left = exec playerctl play-pause
 
 [module/date]
 type = custom/script

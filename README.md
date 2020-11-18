@@ -40,4 +40,5 @@ Programs from screenshots
 
 - `spotify`
 - `firefox` with `minimal-functional-fox` and custom `xrdb` colored CSS files.
+  - replace `minimal-functional-fox` colors in `userChrome.css` with `@import url(file:///path/to/home/.config/firefox/min-fox-colors.css)`
 - `aurafetch`
