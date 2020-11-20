@@ -1,9 +1,15 @@
 #! /usr/bin/env sh
 
+echo ":: Updating Discord"
 pywal-discord
+
+echo ":: Updating Spotify / Spicetify"
 spicetify update
+
+echo ":: Updating and restarting dunst"
 $HOME/.config/dunst/launchdunst.sh
 
+echo ":: Updating Telegram"
 # telegram
 loc=${HOME}/.cache/wal-telegram
 rm -fv "${loc}/*".tdesktop-theme
