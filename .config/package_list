@@ -1,0 +1,90 @@
+# base system
+linux-headers
+xorg-xserver
+zip
+unzip
+nano
+autoconf
+automake
+make
+cmake
+curl
+cpupower
+xterm
+
+# shell
+zsh
+zsh-completions
+## oh-my-zsh
+
+# setup
+alacritty
+xdotool
+alsa
+pulseaudio
+lightdm
+lightdm-slick-greeter
+i3-gaps-rounded-git
+rofi
+polybar
+zscroll-git
+dunst
+python-pywal
+wpgtk-git
+lxappearance
+spicetify-cli-git
+spicetify-themes-git
+aurafetch-git
+
+# fonts
+ttf-material-design-icons
+ttf-ubuntu-font-family
+nerd-fonts-mononoki
+nerd-fonts
+nerd-fonts-all
+nerd-fonts-cjk
+nerd-fonts-emoji
+nerd-fonts-extra
+
+# social
+discord_arch_electron
+telegram-desktop
+steam
+
+# general utilities
+firefox
+spotify
+mpv
+calcurse
+wget
+aria2
+thunar
+thunar-archive-plugin
+thunar-media-tags-plugin
+thunar-volman
+reflector
+ranger
+ueberzug
+qbittorrent
+pavucontrol
+parallel
+
+# pdf/reading
+poppler
+zathura
+zathura-djvu
+zathura-pdf-poppler
+zathura-ps
+evince
+
+# coding and work
+texlive-most
+git
+gcc
+clang
+llvm
+llvm10
+neovim
+vala
+valgrind
+boost
