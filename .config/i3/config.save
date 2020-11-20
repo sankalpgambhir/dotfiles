@@ -38,7 +38,8 @@ font pango: mononoki Nerd Font 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+# TODO auto set terminal instead of hard set
+bindsym $mod+Return exec alacritty
 
 # launch rofi
 bindsym $mod+d exec $HOME/.config/rofi/rofirun.sh
@@ -190,7 +191,7 @@ bindsym $mod+Escape gaps inner all set 30
 # system control and functions
 
 # load polybar
-exec_always --no-startup-id sleep 1; $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # brightness load and change
 exec --no-startup-id light -S 50
@@ -218,7 +219,7 @@ bindsym $mod+x "exec --no-startup-id dunstctl close"
 bindsym $mod+Shift+x "exec --no-startup-id dunstctl close-all"
 
 # compositor
-exec --no-startup-id picom --experimental-backends --config ~/.config/picom.conf
+exec --no-startup-id picom --config ~/.config/picom.conf
 
 # configure x lock
 exec --no-startup-id xss-lock -- dm-tool switch-to-greeter
@@ -237,4 +238,10 @@ for_window [class="^.*"] border pixel 0 # remove borders
 for_window [class="Rofi"] floating enable # using rofi as normal window for corners, TODO do via compositor
 for_window [class="Matplotlib"] floating enable # floating graphs
 for_window [class="Pavucontrol"] floating enable resize 640 480 # audio control panel
-for_window [instance="FloatingPopupTerminal"] floating enable resize 500 500 # using for cli based control panels
+for_window [class="kitty"] floating enable resize 500 500 # using for cli based control panels
+
+# dirty fix for polybar not loading on login
+# TODO fix things to run script properly
+# even this shit doesn't have a 100% success rate
+exec i3-msg restart
+
