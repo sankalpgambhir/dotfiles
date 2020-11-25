@@ -3,12 +3,50 @@
 source $HOME/.cache/wal/colors.sh
 
 function pctl_data {
-	echo -e "$(playerctl metadata -f {{$1}})"
+	echo "$(playerctl metadata -f {{$1}})"
 }
 
-zscroll "echo $(pctl_data "artist") [$(pctl_data "album")] %{F$color1}$(pctl_data "title")%{F-}" \
-	-l 20 \
-	-u true \
-	-U 0.3
+function scroll {
+	echo "${1:1}${1:0:1}"
+}
 
-exit 1
+curtitle=""
+var=""
+curartist=""
+
+while true
+do
+	sleep 0.5
+
+	# check if playerctl is still here
+	if [ -z $(playerctl status 2> /dev/null) ];
+	then
+		echo "No player found"
+	else
+
+		if ! [ "$curtitle" = "$(pctl_data title)" ];
+		then
+			# title changed, check and setup again
+			curtitle="$(pctl_data title)"
+
+			# if title is too long, set up for looping
+			if [ "${#curtitle}" -ge 20 ];
+			then
+				var="$curtitle - "
+			else
+				var="$curtitle"
+			fi
+
+			curartist="$(pctl_data artist)"
+		fi
+
+		echo "$curartist %{F$color7}%{T7}[ ${var:0:20} ]%{T-}%{F-}"
+
+		if [ "${#curtitle}" -ge 20  ] && ! [ $(playerctl status) = "Paused" ];
+		then
+			var=$(scroll "$var")
+		fi
+	fi
+done
+
+exit 0

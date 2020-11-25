@@ -150,7 +150,7 @@ type = internal/network
 interface = wlo1
 interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
+format-connected = %{A1:alacritty -e nmtui --class="FloatingPopupTerminal":}<ramp-signal> <label-connected>%{A}
 label-connected = %essid%
 
 label-disconnected = 
@@ -184,7 +184,7 @@ label-volume-foreground = ${colors.color6}
 label-muted = ""
 label-muted-foreground = #607290
 
-click-right = exec pavucontrol
+click-right = exec pavucontrol &
 
 [module/battery]
 type = internal/battery
@@ -192,27 +192,26 @@ battery = BAT1
 adapter = AC
 full-at = 85
 
-format-charging = %{T3}<label-charging> ▲%{T-} 
+format-charging = "%{A1:$HOME/.config/polybar/scripts/batterynotify.sh:}%{T3}<label-charging> ▲%{T-}%{A}" 
 
-format-discharging = %{T3}<label-discharging> ▼%{T-}
+format-discharging = "%{A1:$HOME/.config/polybar/scripts/batterynotify.sh:}%{T3}<label-discharging> ▼%{T-}%{A}"
 
-# prevent overchanging :)
-format-full = "%{T3}<label-full>   %{T-}"
+# prevent overcharging :)
+format-full = "%{A1:$HOME/.config/polybar/scripts/batterynotify.sh:}%{T3}<label-full>   %{T-}%{A}"
+
+label-full = "85%+"
 format-full-foreground = #ff0000
 
 [module/song]
 type = custom/script
-exec = $HOME/.config/polybar/scripts/player.sh 2>/dev/null || echo "No player found"
-format = "<label>"
+exec = $HOME/.config/polybar/scripts/song.sh 2>/dev/null
+format = "%{A1:playerctl play-pause:}<label> %{A}%{A1:playerctl previous:} %{A}%{A1:playerctl play-pause:}♦%{A}%{A1:playerctl next:} %{A}"
 format-prefix = "  %{F-}"
 format-suffix = " | "
 format-background = #0000000
 interval = 1
 
 tail = true
-
-; media controls
-click-left = exec playerctl play-pause
 
 [module/date]
 type = custom/script

@@ -193,7 +193,7 @@ bindsym $mod+Escape gaps inner all set 30
 exec_always --no-startup-id sleep 1; $HOME/.config/polybar/launch.sh
 
 # brightness load and change
-exec --no-startup-id light -S 50
+exec --no-startup-id light -S 20
 bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
 
@@ -231,6 +231,9 @@ bindsym $mod+Shift+e exec $HOME/.config/rofi/rofipowermenu.sh
 
 # instant lock instead
 bindsym $mod+l exec dm-tool switch-to-greeter
+
+# emoji menu
+bindsym $mod+p exec $HOME/.config/rofi/rofiemoji.sh
 
 # manual window configs
 for_window [class="^.*"] border pixel 0 # remove borders
