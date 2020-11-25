@@ -1,6 +1,6 @@
 # dotfiles
 
-my ArchLinux rice, using i3/polybar mainly.
+my ArchLinux rice
 
 # insert pix here
 
@@ -8,7 +8,7 @@ my ArchLinux rice, using i3/polybar mainly.
 
 Basic:
 
-- `i3-gaps-rounded`
+- `i3-gaps-rounded` < TODO switch to `picom` for rounding and use `i3-gaps` instead
 - `polybar`
 - `picom`
 - `lightdm`
