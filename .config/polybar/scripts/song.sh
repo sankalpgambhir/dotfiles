@@ -38,6 +38,12 @@ do
 			fi
 
 			curartist="$(pctl_data artist)"
+
+			# if artist name too long, trim and add ellipsis
+			if [ "${#curartist}" -ge 15 ];
+			then
+				curartist="${curartist:0:11}..."
+			fi
 		fi
 
 		echo "$curartist %{F$color7}%{T7}[ ${var:0:20} ]%{T-}%{F-}"
