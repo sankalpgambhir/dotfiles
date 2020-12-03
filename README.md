@@ -34,7 +34,6 @@ For dynamic coloring as configured:
 Fonts etc:
 
 - Mononoki Nerd Font
-- Material Design Icons
 
 Programs from screenshots
 

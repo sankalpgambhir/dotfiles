@@ -170,10 +170,10 @@ label-disconnected-foreground = #6c809e
 [module/pulseaudio]
 type = internal/pulseaudio
 
-label-volume = " %percentage%%"
+label-volume = "墳 %percentage%%"
 label-volume-foreground = ${colors.color6}
 
-label-muted = ""
+label-muted = "婢"
 label-muted-foreground = #607290
 
 click-right = exec pavucontrol &
@@ -184,9 +184,9 @@ battery = BAT1
 adapter = AC
 full-at = 85
 
-format-charging = "%{A1:$HOME/.config/polybar/scripts/batterynotify.sh:}%{T3}<label-charging> ▲%{T-}%{A}" 
+format-charging = "%{A1:$HOME/.config/polybar/scripts/batterynotify.sh:}%{T3}<label-charging> %{T-}%{A}" 
 
-format-discharging = "%{A1:$HOME/.config/polybar/scripts/batterynotify.sh:}%{T3}<label-discharging> ▼%{T-}%{A}"
+format-discharging = "%{A1:$HOME/.config/polybar/scripts/batterynotify.sh:}%{T3}<label-discharging> %{T-}%{A}"
 
 # prevent overcharging :)
 format-full = "%{A1:$HOME/.config/polybar/scripts/batterynotify.sh:}%{T3}<label-full>   %{T-}%{A}"
@@ -194,13 +194,16 @@ format-full = "%{A1:$HOME/.config/polybar/scripts/batterynotify.sh:}%{T3}<label-
 label-full = "85%+"
 format-full-foreground = #ff0000
 
+format-low = "%{A1:$HOME/.config/polybar/scripts/batterynotify.sh:}%{T3}<label-low> %{T-}%{A}" 
+format-low-foreground = #ff0000
+
 [module/song]
 type = custom/script
 exec = $HOME/.config/polybar/scripts/song.sh 2>/dev/null
 format = "%{A1:playerctl play-pause:}<label> %{A}%{A1:playerctl previous:} %{A}%{A1:playerctl play-pause:}ﰉ%{A}%{A1:playerctl next:} %{A}"
-format-prefix = "  %{F-}"
+format-prefix = " %{F-}"
 format-suffix = " | "
-format-background = #0000000
+format-background = #00000000
 interval = 1
 
 tail = true
