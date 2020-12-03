@@ -8,9 +8,9 @@ my ArchLinux rice
 
 Basic:
 
-- `i3-gaps-rounded` < TODO switch to `picom` for rounding and use `i3-gaps` instead
+- `i3-gaps`
 - `polybar`
-- `picom`
+- `ibhagwan/picom`
 - `lightdm`
 - `rofi`
 - `dunst`

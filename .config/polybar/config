@@ -17,7 +17,7 @@ secondary = #a9b3c2
 background-level= #cec8d8ff
 alert = ${xrdb:foreground}
 color6 = ${xrdb:color4:#222}
-color5 = ${xrdb:color4:#222}
+color5 = ${xrdb:color5:#222}
 
 [bar/workspace]
 width = 24%
@@ -37,9 +37,8 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
  
-font-0 = Material Icons:pixelsize=22;1
-font-1 = mononoki Nerd Font:pixelsize=12:style=Regular Condensed;-2
-font-2 = Material Icons:pixelsize=22;-10
+font-0 = mononoki Nerd Font:pixelsize=18:style=Regular Condensed;-2
+font-1 = mononoki Nerd Font:pixelsize=18:style=Regular Condensed;-2
  
 modules-left = i3
 
@@ -69,15 +68,7 @@ padding-right = 2
 module-margin-left = 0
 module-margin-right = 0
  
-font-0 = mononoki Nerd Font:pixelsize=15:style=Regular Condensed;2
-font-1 = Font Awesome 5 Pro:pixelsize=15:style=Solid;3
-font-2 = Font Awesome 5 Brands:pixelsize=15;3
-font-3 = SourceHanSansJP:pixelsize=12:style=Medium;2
-font-4 = Font Awesome 5 Pro:pixelsize=15:style=Solid;3
-font-5 = mononoki Nerd Font Mono:pixelsize=12:style=Regular Condensed;7
-font-6 = mononoki Nerd Font:pixelsize=12:style=Regular;2
-font-7 = mononoki Nerd Font:pixelsize=12:style=Regular Condensed;2
-font-8 = Material Icons:pixelsize=20;5
+font-0 = mononoki Nerd Font Mono:pixelsize=13:style=Regular Condensed;2
  
 modules-center = song pulseaudio
 
@@ -106,11 +97,7 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 1
  
-font-0 = mononoki Nerd Font:pixelsize=15:style=Medium Condensed;4
-font-1 = Material Icons:pixelsize=20;5
-font-2 = mononoki Nerd Font:pixelsize=15:style=Bold Condensed;3
-font-3 = mononoki Nerd Font:pixelsize=15:style=Medium Condensed;5
-font-4 = Weather Icons:size=12;0
+font-0 = mononoki Nerd Font:pixelsize=13:style=Medium Condensed;4
 
 modules-center = eth battery wlan date 
 
@@ -130,17 +117,20 @@ enable-scroll = true
 
 format = "<label-state>" 
 
-label-focused =""
+label-focused =""
 label-focused-padding = 1
-label-focused-foreground = ${colors.color6}
+label-focused-foreground = ${colors.color5}
+label-focused-font = 2
 
-label-unfocused = ""
+label-unfocused = ""
 label-unfocused-padding = 1
 label-unfocused-foreground = ${colors.color6}
+label-unfocused-font = 1
 
-label-urgent =""
+label-urgent =""
 label-urgent-foreground= ${colors.alert}
 label-urgent-padding = 1
+label-urgent-font = 1
 
 label-empty = ""
 label-empty-padding = 1
@@ -156,14 +146,16 @@ label-connected = %essid%
 label-disconnected = 
 label-disconnected-foreground = #6c809e
 
-ramp-signal-0 = %{F#ff004b}%{F-}
-ramp-signal-1 = %{F#ffd200}%{F-}
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 = %{F#ff004b}%{F-}
+ramp-signal-1 = %{F#ffd200}%{F-}
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-5 = 
 ramp-signal-foreground = ${colors.color6}
+ramp-signal-font = 1
 
-click-left = exec $TERMINAL --class="FloatingPopupTerminal" -e nmtui
+click-left = exec xterm -e nmtui
 
 [module/eth]
 type = internal/network
@@ -205,7 +197,7 @@ format-full-foreground = #ff0000
 [module/song]
 type = custom/script
 exec = $HOME/.config/polybar/scripts/song.sh 2>/dev/null
-format = "%{A1:playerctl play-pause:}<label> %{A}%{A1:playerctl previous:} %{A}%{A1:playerctl play-pause:}♦%{A}%{A1:playerctl next:} %{A}"
+format = "%{A1:playerctl play-pause:}<label> %{A}%{A1:playerctl previous:} %{A}%{A1:playerctl play-pause:}ﰉ%{A}%{A1:playerctl next:} %{A}"
 format-prefix = "  %{F-}"
 format-suffix = " | "
 format-background = #0000000
