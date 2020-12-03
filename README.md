@@ -10,7 +10,7 @@ Basic:
 
 - `i3-gaps`
 - `polybar`
-- `ibhagwan/picom`
+- `picom-ibhagwan`<sup>AUR</sup>
 - `lightdm`
 - `rofi`
 - `dunst`
@@ -27,9 +27,9 @@ System control and utilities
 For dynamic coloring as configured:
 
 - `pywal`
-- `pywal-discord`
-- `wal-telegram`
-- `spicetify` / with dribbblish (custom `xrdb` compliant pallette, courtesy of CassidyMWagner)
+- `pywal-discord`<sup>AUR</sup>
+- `wal-telegram`<sup>git</sup>
+- `spicetify`<sup>AUR</sup> / with dribbblish
 
 Fonts etc:
 
@@ -40,4 +40,4 @@ Programs from screenshots
 - `spotify`
 - `firefox` with `minimal-functional-fox` and custom `xrdb` colored CSS files.
   - replace `minimal-functional-fox` colors in `userChrome.css` with `@import url(file:///path/to/home/.config/firefox/min-fox-colors.css)`
-- `aurafetch`
+- `aurafetch`<sup>AUR</sup>
