@@ -15,11 +15,11 @@ function confirm {
 
 options=" Go back\n Lock\n⏾ Suspend\n Hibernate\n Log out\n Reboot\n⏻ Power off"
 
-chosen=$(echo -e "$options" | rofi "${walargs[@]}" -p "Power Options" -matching fuzzy -dmenu -i -width 14 -lines $(echo -e "${options}" | wc -l))
+chosen=$(echo -e "$options" | rofi "${walargs[@]}" -p "Power Options" -matching fuzzy -dmenu -i -width 14 -lines $(echo -e "$options" | wc -l))
 
 case $chosen in
 	*Go\ back)
-		;;W
+		;;
 
 	*Lock)
 		dm-tool switch-to-greeter
