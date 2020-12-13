@@ -223,9 +223,6 @@ exec --no-startup-id picom --experimental-backends -b
 # configure x lock
 exec --no-startup-id xss-lock -- dm-tool switch-to-greeter
 
-# clipboard
-exec --no-startup-id clipit
-
 # power/lock options
 bindsym $mod+Shift+e exec $HOME/.config/rofi/rofipowermenu.sh
 
