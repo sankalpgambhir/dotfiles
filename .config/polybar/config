@@ -217,10 +217,3 @@ click-right = exec alacritty class="FloatingPopupTerminal" -e calcurse
 [settings]
 screenchange-reload = false
 pseudo-transparency = true
-
-[global/wm]
-margin-top = 5
-margin-bottom = 3
-
-
-
