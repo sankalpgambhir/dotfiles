@@ -1,8 +1,14 @@
 # dotfiles
 
-my ArchLinux rice
+Place to keep track of my config files, often used across devices.
 
-# insert pix here
+Floating Money Shot
+
+![ss1](Pictures/Screenshots/2020-12-16_00-07.png)
+
+Actually tiled and working
+
+![ss2](Pictures/Screenshots/2020-12-16_00-08.png)
 
 ## Dependencies
 
@@ -38,6 +44,7 @@ Fonts etc:
 Programs from screenshots
 
 - `spotify`
-- `firefox` with `minimal-functional-fox` and custom `xrdb` colored CSS files.
-  - replace `minimal-functional-fox` colors in `userChrome.css` with `@import url(file:///path/to/home/.config/firefox/min-fox-colors.css)`
-- `aurafetch`<sup>AUR</sup>
+- `firefox` with `minimal-functional-fox`
+- `ufetch`<sup>AUR</sup>
+
+Full package list in `.config/package-list`.
