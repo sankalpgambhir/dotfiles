@@ -189,6 +189,9 @@ bindsym $mod+Escape gaps inner all set 30
 
 # system control and functions
 
+# auto tiling
+exec_always --no-startup-id $HOME/.config/i3/i3-auto-layout
+
 # load polybar
 exec_always --no-startup-id sleep 1; $HOME/.config/polybar/launch.sh
 
@@ -237,4 +240,4 @@ for_window [class="^.*"] border pixel 0 # remove borders
 for_window [class="Rofi"] floating enable # using rofi as normal window for corners, TODO do via compositor
 for_window [class="Matplotlib"] floating enable # floating graphs
 for_window [class="Pavucontrol"] floating enable resize 640 480 # audio control panel
-for_window [instance="FloatingPopupTerminal"] floating enable resize 500 500 # using for cli based control panels
+for_window [title="dropdownterminal"] floating enable resize 500 500 # using for cli based control panels
