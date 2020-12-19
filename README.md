@@ -16,7 +16,7 @@ Basic:
 
 - `i3-gaps`
 - `polybar`
-- `picom-ibhagwan`<sup>AUR</sup>
+- `picom-ibhagwan`<sup>aur</sup>
 - `lightdm`
 - `rofi`
 - `dunst`
@@ -28,14 +28,13 @@ System control and utilities
 - `playerctl`
 - `light` (instead of xbacklight because I have an AMD GPU)
 - `flameshot`
-- `kitty` (used for popups as an alternate terminal for `nmtui` etc)
 
 For dynamic coloring as configured:
 
 - `pywal`
-- `pywal-discord`<sup>AUR</sup>
+- `pywal-discord`<sup>aur</sup>
 - `wal-telegram`<sup>git</sup>
-- `spicetify`<sup>AUR</sup> / with dribbblish
+- `spicetify`<sup>aur</sup> / with dribbblish
 
 Fonts etc:
 
@@ -45,6 +44,7 @@ Programs from screenshots
 
 - `spotify`
 - `firefox` with `minimal-functional-fox`
-- `ufetch`<sup>AUR</sup>
+- `ufetch`<sup>aur</sup>
 
-Full package list in `.config/package-list`.
+Manual package list in `.config/package-list`.
+Full package list in `.config/package-list-auto-yay`.
