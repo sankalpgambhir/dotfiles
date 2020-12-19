@@ -24,27 +24,21 @@ alsa
 pulseaudio
 lightdm
 lightdm-slick-greeter
-i3-gaps-rounded-git
+i3-gaps
 rofi
 polybar
-zscroll-git
 dunst
 python-pywal
 wpgtk-git
 lxappearance
 spicetify-cli-git
 spicetify-themes-git
-aurafetch-git
 
 # fonts
-ttf-material-design-icons
 ttf-ubuntu-font-family
 nerd-fonts-mononoki
 nerd-fonts
-nerd-fonts-all
-nerd-fonts-cjk
-nerd-fonts-emoji
-nerd-fonts-extra
+noto-fonts-all
 
 # social
 discord_arch_electron
