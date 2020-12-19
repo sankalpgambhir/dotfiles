@@ -140,7 +140,7 @@ type = internal/network
 interface = wlo1
 interval = 3.0
 
-format-connected = %{A1:alacritty -e nmtui --class="FloatingPopupTerminal":}<ramp-signal> <label-connected>%{A}
+format-connected = %{A1:exec $TERMINAL -t "dropdownterminal" -e "$HOME/.config/polybar/scripts/netmenu.sh":}<ramp-signal> <label-connected>%{A}
 label-connected = %essid%
 
 label-disconnected = 
@@ -212,7 +212,7 @@ exec =  echo "|  $(date '+%a %e %b %I:%M %p')"
 interval = 5
 tail = true
 
-click-right = exec alacritty class="FloatingPopupTerminal" -e calcurse
+click-right = exec $TERMINAL -t "dropdownterminal" -e "$HOME/.config/polybar/scripts/calender.sh"
 
 [settings]
 screenchange-reload = false
