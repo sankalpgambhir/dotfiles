@@ -21,7 +21,7 @@ printf ":: Generating color scheme from still\n"
 wal -i still.png -o all-wal --saturate ${2}
 
 # set video background
-$HOME/Downloads/clone/xwinwrap/xwinwrap -b -s -fs -st -sp -nf -ov -ni -fdt \
+xwinwrap -b -s -fs -st -sp -nf -ov -ni -fdt \
 	-- mpv -wid WID  \
 	--framedrop=vo --no-audio \
 	--hwdec=auto \
