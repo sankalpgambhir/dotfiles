@@ -1,0 +1,30 @@
+# !/usr/bin/env sh
+
+vwdir="$HOME/.cache/video-wal/${1}.d/"
+
+mkdir -p "${vwdir}"
+
+# extract a still
+printf ":: Caching video and generating still\n"
+cp "${1}" "${vwdir}"
+pushd "${vwdir}"
+ffmpeg -i ${1} -vf "select=eq(n\,69)" \
+	-vframes 1 still.png > /dev/null
+
+# set manual framerate
+ffmpeg -y -i ${1} -c copy -f h264 ${1}.h264
+ffmpeg -y -r 6 -i ${1}.h264 -c:v hevc ${1}.mkv
+rm -f ${1} ${1}.h264
+
+# set color scheme from still
+printf ":: Generating color scheme from still\n"
+wal -i still.png -o all-wal --saturate ${2}
+
+# set video background
+$HOME/Downloads/clone/xwinwrap/xwinwrap -b -s -fs -st -sp -nf -ov -ni -fdt \
+	-- mpv -wid WID  \
+	--framedrop=vo --no-audio \
+	--hwdec=auto \
+	--panscan="1.0" --loop ${1}.mkv
+
+popd
