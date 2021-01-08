@@ -69,7 +69,12 @@ module-margin-left = 0
 module-margin-right = 0
  
 font-0 = mononoki Nerd Font Mono:pixelsize=13:style=Regular Condensed;2
- 
+font-1 = Noto Sans CJK JP:pixelsize=13
+font-2 = Noto Sans CJK HK:pixelsize=13
+font-3 = Noto Sans CJK KR:pixelsize=13
+font-4 = Noto Sans CJK SC:pixelsize=13
+font-5 = Noto Sans CJK TC:pixelsize=13
+
 modules-center = song pulseaudio
 
 wm-restack = i3
