@@ -48,7 +48,7 @@ do
 
 		echo "$curartist %{F$color7}%{T7}[ ${var:0:20} ]%{T-}%{F-}"
 
-		if [ "${#curtitle}" -ge 20  ] && ! [ $(playerctl status) = "Paused" ];
+		if [ "${#curtitle}" -ge 20  ] && ! [ -z $(playerctl -a status | grep Playing) ];
 		then
 			var=$(scroll "$var")
 		fi

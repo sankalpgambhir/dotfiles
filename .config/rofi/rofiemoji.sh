@@ -4,7 +4,7 @@ source "$HOME/.config/rofi/rofiwal.sh"
 
 elist="$HOME/.config/rofi/emoji-list"
 
-chosen=$(awk '{print $1}' $elist | rofi "${walargs[@]}" -p "Emoji" -matching fuzzy -dmenu -i -width 14 -lines 10)
+chosen=$(awk '{print $1}' $elist | rofi "${walargs[@]}" -p "Emoji" -normal-window -matching fuzzy -dmenu -i -width 14 -lines 10)
 
 [[ -z $chosen ]] && exit 1
 

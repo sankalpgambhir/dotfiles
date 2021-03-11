@@ -221,4 +221,4 @@ click-right = exec $TERMINAL -t "dropdownterminal" -e "$HOME/.config/polybar/scr
 
 [settings]
 screenchange-reload = false
-pseudo-transparency = false
+pseudo-transparency = true
