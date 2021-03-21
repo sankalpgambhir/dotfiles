@@ -239,5 +239,6 @@ bindsym $mod+p exec $HOME/.config/rofi/rofiemoji.sh
 for_window [class="^.*"] border pixel 0 # remove borders
 for_window [class="Rofi"] floating enable # using rofi as normal window for corners, TODO do via compositor
 for_window [class="Matplotlib"] floating enable # floating graphs
+for_window [class="gnuplot_qt"] floating enable # floating graphs
 for_window [class="Pavucontrol"] floating enable resize 640 480 # audio control panel
 for_window [title="dropdownterminal"] floating enable resize 500 500 # using for cli based control panels
