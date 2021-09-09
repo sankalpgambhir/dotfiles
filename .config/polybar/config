@@ -214,7 +214,7 @@ tail = true
 
 [module/date]
 type = custom/script
-exec =  echo "|  $(date '+%a%e %b %I:%M %p')" 
+exec =  echo "|  $(date '+%a %e %b %I:%M %p')" 
 interval = 5
 tail = true
 
