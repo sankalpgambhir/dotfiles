@@ -14,6 +14,10 @@ spicetify update > $output
 echo ":: Updating and restarting dunst"
 $HOME/.config/dunst/launchdunst.sh
 
+echo ":: Updating rofi"
+cat $HOME/.config/wal/custom-templates/rofi-extras >> $HOME/.cache/wal/colors-rofi-dark.rasi
+cat $HOME/.config/wal/custom-templates/rofi-extras >> $HOME/.cache/wal/colors-rofi-light.rasi
+
 echo ":: Updating Telegram"
 pushd $HOME/.cache/wal-telegram > $output
 rm -f *.tdesktop-theme

@@ -2,6 +2,7 @@
 
 # force pywal resources load
 exec --no-startup-id wal -R
+exec --no-startup-id all-wal
 
 # load xrdb colors
 set_from_resource $bg  color0  #f0f0f0
