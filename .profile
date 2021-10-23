@@ -1,5 +1,5 @@
 # custom app directories
-PATH="$PATH:$HOME/local/bin"			# python/pip programs
+PATH="$PATH:$HOME/.local/bin"			# python/pip programs
 PATH="$PATH:$HOME/personal/scripts"		# my scripts
 PATH="$PATH:$HOME/.gem/ruby/2.7.0/bin"		# ruby gems
 PATH="$PATH:/root/.local/share/gem/ruby/3.0.0/bin" # ruby gems
