@@ -75,7 +75,7 @@ font-3 = Noto Sans CJK KR:pixelsize=13
 font-4 = Noto Sans CJK SC:pixelsize=13
 font-5 = Noto Sans CJK TC:pixelsize=13
 
-modules-center = song pulseaudio
+modules-center = song audio
 
 wm-restack = i3
 override-redirect = true
@@ -171,7 +171,7 @@ label-connected = 
 label-disconnected = 
 label-disconnected-foreground = #6c809e
 
-[module/pulseaudio]
+[module/audio]
 type = internal/pulseaudio
 
 label-volume = "墳 %percentage%%"
