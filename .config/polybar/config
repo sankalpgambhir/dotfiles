@@ -147,6 +147,8 @@ interval = 3.0
 
 format-connected = %{A1:exec $TERMINAL -t "dropdownterminal" -e "$HOME/.config/polybar/scripts/netmenu.sh":}<ramp-signal> <label-connected>%{A}
 label-connected = %essid%
+label-connected-maxlen = 10
+label-connected-ellipsis = true
 
 format-disconnected = %{A1:exec $TERMINAL -t "dropdownterminal" -e "$HOME/.config/polybar/scripts/netmenu.sh":}<label-disconnected>%{A}
 label-disconnected = 
@@ -214,7 +216,7 @@ tail = true
 
 [module/date]
 type = custom/script
-exec =  echo "|  $(date '+%a %e %b %I:%M %p')" 
+exec =  echo "|  $(date '+%a') $(date '+%e %b %I:%M %p')" 
 interval = 5
 tail = true
 
