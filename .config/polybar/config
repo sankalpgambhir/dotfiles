@@ -195,7 +195,7 @@ format-charging = "%{A1:$HOME/.config/polybar/scripts/batterynotify.sh:}%{T3}<la
 format-discharging = "%{A1:$HOME/.config/polybar/scripts/batterynotify.sh:}%{T3}<label-discharging> %{T-}%{A}"
 
 # prevent overcharging :)
-format-full = "%{A1:$HOME/.config/polybar/scripts/batterynotify.sh:}%{T3}<label-full>   %{T-}%{A}"
+format-full = "%{A1:$HOME/.config/polybar/scripts/batterynotify.sh:}%{T3}<label-full> %{T-}%{A}"
 
 label-full = "85%+"
 format-full-foreground = #ff0000
