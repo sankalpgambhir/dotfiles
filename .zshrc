@@ -108,3 +108,6 @@ plugins=(
 
 # fixes (?)
 PERL_DESTRUCT_LEVEL=2
+
+# opam configuration
+[[ ! -r /home/hakase/.opam/opam-init/init.zsh ]] || source /home/hakase/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
