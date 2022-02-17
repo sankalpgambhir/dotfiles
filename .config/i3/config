@@ -6,20 +6,21 @@ exec --no-startup-id all-wal
 
 # load xrdb colors
 set_from_resource $bg  color0  #f0f0f0
-set_from_resource $fg  color2  #f0f0f0
+set_from_resource $fg  color1  #f0f0f0
 set_from_resource $bg2 color4  #f0f0f0
 set_from_resource $fg2 color4  #f0f0f0
 set_from_resource $fg4 color5  #f0f0f0
 set_from_resource $bg3 color2  #f0f0f0
 set_from_resource $bg4 color6  #f0f0f0
 set_from_resource $fg3 color7  #f0f0f0
+set_from_resource $fg5 color2  #f0f0f0
 
 #class                 border  backgr. text indicator child_border
-client.focused          $fg3      $bg    $fg  $fg3   $fg3
-client.focused_inactive $fg2      $bg    $fg  $fg2   $fg2
-client.unfocused        $fg2      $bg    $fg  $fg2   $fg2
-client.urgent           $fg4      $bg    $fg  $fg4   $fg4
-client.placeholder      $fg2      $bg    $fg  $fg2   $fg2
+client.focused          $fg2      $bg    $fg  $fg3   $fg5
+client.focused_inactive $fg3      $bg    $fg  $fg2   $fg
+client.unfocused        $fg3      $bg    $fg  $fg2   $fg
+client.urgent           $fg3      $bg    $fg  $fg4   $fg
+client.placeholder      $fg3      $bg    $fg  $fg2   $fg5
 client.background       $fg2
 
 # i3 binds and settings
@@ -79,7 +80,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # toggle title bars
-bindsym $mod+Shift+b border normal
+# bindsym $mod+Shift+b border normal
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -163,10 +164,10 @@ mode "moveit" {
 
 # default gaps
 gaps inner 15
-gaps outer 0
-gaps top 30
-gaps bottom 0
-#border_radius 11
+gaps outer 15
+gaps top 35
+gaps bottom 5
+# border_radius 11
 
 # gap bindings
 
@@ -237,7 +238,7 @@ bindsym $mod+l exec dm-tool switch-to-greeter
 bindsym $mod+p exec $HOME/.config/rofi/rofiemoji.sh
 
 # manual window configs
-for_window [class="^.*"] border pixel 0 # remove borders
+for_window [class="^.*"] border pixel 3 # configure borders
 for_window [class="Rofi"] floating enable # using rofi as normal window for corners, TODO do via compositor
 for_window [class="Matplotlib"] floating enable # floating graphs
 for_window [class="gnuplot_qt"] floating enable # floating graphs
