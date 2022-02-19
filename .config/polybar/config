@@ -147,7 +147,7 @@ interval = 3.0
 
 format-connected = %{A1:exec $TERMINAL -t "dropdownterminal" -e "$HOME/.config/polybar/scripts/netmenu.sh":}<ramp-signal> <label-connected>%{A}
 label-connected = %essid%
-label-connected-maxlen = 10
+label-connected-maxlen = 8
 label-connected-ellipsis = true
 
 format-disconnected = %{A1:exec $TERMINAL -t "dropdownterminal" -e "$HOME/.config/polybar/scripts/netmenu.sh":}<label-disconnected>%{A}
@@ -164,6 +164,9 @@ ramp-signal-foreground = ${colors.color6}
 ramp-signal-font = 1
 
 [module/eth]
+# this is some broken shit
+# I'll update this some other day
+# don't even have ethernet rn :)
 type = internal/network
 interface = enp3s0
 interval = 3.0
