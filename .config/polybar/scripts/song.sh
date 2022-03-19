@@ -3,7 +3,7 @@
 source $HOME/.cache/wal/colors.sh
 
 function pctl_data {
-	echo "$(playerctl metadata -f {{$1}})"
+	echo "$(playerctl -a metadata -f {{$1}} | tail -n 1)"
 }
 
 function scroll {
